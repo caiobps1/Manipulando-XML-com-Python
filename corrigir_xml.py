@@ -6,7 +6,7 @@ def corrigir_xml(arquivo_xml):
         conteudo = file.read()
         conteudo = conteudo.replace('chance1', 'chance')
         conteudo = re.sub(r' countmax="\d+"', '', conteudo)
-        conteudo = re.sub(r'-- (.*?)\s*(?=<)', r'<!-- \1 -->\n', conteudo)
+        conteudo = re.sub(r'--\s?(.*?)\s*(?=<)', r'<!-- \1 -->\n', conteudo)
         
     with open(arquivo_xml, 'w', encoding='utf-8') as file:
         file.write(conteudo)
