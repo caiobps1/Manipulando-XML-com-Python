@@ -44,3 +44,7 @@ Além disso preciso alterar o comentário ```-- plate armor``` para ```<!-- plat
 
 Ajustei o script para ser chamado por linha de comando utilizando a biblioteca argparse para processar os argumentos.
 
+Comando para executar arquivo ``` python corrigir_xml.py arquivo.xml ```
+
+Eu utilizei python3 em uma máquina linux
+
