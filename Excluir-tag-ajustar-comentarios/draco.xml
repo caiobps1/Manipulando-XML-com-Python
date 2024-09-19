@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="draco" nameDescription="a draco" race="blood" experience="2400" speed="180" manacost="0">
+  <health now="2800" max="2800"/>
+  <look type="34" head="20" body="30" legs="40" feet="50" corpse="5973"/>
+  <targetchange interval="5000" chance="20"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="300"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" min="-200" max="-300"/>
+    <attack name="physical" interval="3000" chance="29" length="8" spread="3" min="-190" max="-300">
+      <attribute key="areaEffect" value="poff"/>
+    </attack>
+  </attacks>
+  <defenses armor="25" defense="25">
+    <defense name="healing" interval="1000" chance="13" min="34" max="56">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity fire="1"/>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+	<elements>
+		<element energyPercent="10"/>
+		<element earthPercent="30"/>
+		<element icePercent="10"/>
+		<element firePercent="86"/>
+		<element holyPercent="22"/>
+		<element deathPercent="15"/>
+	</elements>
+  <voices interval="5000" chance="10">
+    <voice sentence="GROOAAARRR" yell="1"/>
+    <voice sentence="FCHHHHH" yell="1"/>
+  </voices>
+  <loot>
+    <item id="2672" countmax="3" chance1="20000" chancemax="0"/>
+    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
+    <item id="2647" chance="1200"/> -- plate legs
+    <item id="2387" chance="1400"/> -- double axe
+    <item id="2397" chance="1080"/> -- long sword
+    <item id="2546" countmax="10" chance1="1000" chancemax="0"/> -- burst arrow
+    <item id="5877" countmax="2" chance1="1200" chancemax="0"/> -- green dragon leather
+    <item id="1987" chance="100000">
+      <inside>
+	<item id="7419" chance="300"/> -- dreaded cleaver
+        <item id="2187" chance="1100" /> -- wand of Inferno
+        <item id="2516" chance="740"/> -- dragon shield
+        <item id="2145" countmax="3" chance1="1333" chancemax="0"/> -- small diamond
+        <item id="2409" chance="1289"/> -- serpent sword
+        <item id="5920" countmax="2" chance1="1600" chancemax="0"/> -- green dragon scale
+      </inside>
+    </item>
+  </loot>
+</monster>

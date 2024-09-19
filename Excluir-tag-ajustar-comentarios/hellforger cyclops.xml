@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <monster name="Hellforger Cyclops" nameDescription="a hellforger cyclops" race="blood" experience="2600" speed="190" manacost="490">
+    <health now="8600" max="8600"/>
+    <look type="277" head="20" body="30" legs="40" feet="50" corpse="7741"/>
+    <targetchange interval="60000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+      <flag summonable="0"/>
+      <flag attackable="1"/>
+      <flag hostile="1"/>
+      <flag illusionable="1"/>
+      <flag convinceable="1"/>
+      <flag pushable="0"/>
+      <flag canpushitems="1"/>
+      <flag staticattack="80"/>
+      <flag lightlevel="0"/>
+      <flag lightcolor="0"/>
+      <flag targetdistance="1"/>
+      <flag runonhealth="0"/>
+    </flags>
+    <attacks>
+      <attack name="melee" interval="2000" min="-200" max="-290"/>
+	  <attack name="melee" interval="1000" chance="20" min="-200" max="-220">
+		<attribute key="shootEffect" value="whirlwindclub"/>
+	  </attack>
+	  <attack name="fire" interval="1765" chance="15" radius="3" target="1" min="-300" max="-320">
+		<attribute key="shootEffect" value="burstarrow"/>
+		<attribute key="areaEffect" value="firearea"/>
+	  </attack>
+    </attacks>
+    <defenses armor="24" defense="25"/>
+	<elements>
+		<element energyPercent="10"/>
+		<element earthPercent="12"/>
+		<element icePercent="10"/>
+		<element firePercent="16"/>
+		<element holyPercent="11"/>
+		<element deathPercent="9"/>
+	</elements>
+    <immunities>
+      <immunity physical="0"/>
+      <immunity energy="0"/>
+      <immunity fire="0"/>
+      <immunity poison="0"/>
+      <immunity lifedrain="0"/>
+      <immunity paralyze="1"/>
+      <immunity outfit="0"/>
+      <immunity drunk="0"/>
+      <immunity invisible="1"/>
+    </immunities>
+    <voices interval="2000" chance="5">
+      <voice sentence="forjarei seus ossos"/>
+    </voices>
+    <loot>
+      <item id="7427" chance="680"/> -- chaos mace
+      <item id="2463" chance="1100"/> -- plate armor
+      <item id="2641" chance="800"/> -- traper boots
+      <item id="2671" countmax="2" chance1="2000" chancemax="0"/> -- meat
+      <item id="2666" countmax="3" chance1="1800" chancemax="0"/> -- meat
+      <item id="2391" chance="890"/> -- war hammer
+      <item id="2422" chance="1000"/> -- iron hammer
+      <item id="1987" chance="100000">
+        <inside>
+      <item id="2148" countmax="43" chance1="100000" chancemax="0"/>
+      <item id="2643" chance="1500"/> -- leather boots
+        </inside>
+      </item>
+    </loot>
+  </monster>
