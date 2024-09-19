@@ -1,5 +1,6 @@
 # Manipulando XML com Python
 
+
 ## Excluir tags com estrutura irregular (limpar.py)
 Para automatizar a tarefa de excluir as tags com problema utilizei a biblioteca **xml.etree.ElementTree** do Python para processar o meu arquivo XML
 
@@ -32,7 +33,7 @@ O método findall('monster') é utilizado para buscar todas as tags <monster> de
 Após fazer as alterações, o arquivo corrigido é salvo como arquivo_corrigido.xml.
 
 
-## Excluir tag e ajustar comentários (corrigir-xml.py)
+## Excluir tag e ajustar comentários (corrigir_xml.py)
 
 A estrutura do meu arquivo possui a seguinte linha:
 
@@ -47,4 +48,13 @@ Ajustei o script para ser chamado por linha de comando utilizando a biblioteca a
 Comando para executar arquivo ``` python corrigir_xml.py arquivo.xml ```
 
 Eu utilizei python3 em uma máquina linux
+
+
+## Excluir tag e ajustar comentários em todos os XML (corrigir_todos_xml.py)
+
+Mesmo código acima, adicionada a biblioteca ```os``` para listar os arquivos nas pastas e subpastas, e a biblioteca ```glob``` para filtrar apenas os XML.
+
+Usei a condição ```if os.path.basename(arquivo) == "monsters.xml":``` para verificar se o arquivo é monsters.xml, e o comando ```continue``` para continuar o loop, porque este arquivo não é interessante para modificar.
+
+Comando para executar arquivo ```python corrigir_todos_xml.py caminho/para/sua/pasta```
 
